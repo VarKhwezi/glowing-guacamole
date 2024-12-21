@@ -29,9 +29,17 @@ Use the following Bash script to set up the game environment:
 
 ```bash
 #!/bin/bash
-# setup.sh - Script to set up the Alien Invasion game
+# setup.sh - Script to set up the Alien Invasion game with a virtual environment
 
 echo "Setting up Alien Invasion Game..."
+
+# Create a virtual environment
+echo "Creating a virtual environment..."
+python3 -m venv alien_invasion_env
+
+# Activate the virtual environment
+echo "Activating the virtual environment..."
+source alien_invasion_env/bin/activate
 
 # Install Pygame
 echo "Installing Pygame..."
@@ -41,4 +49,5 @@ pip install pygame
 echo "Cloning the repository..."
 git clone https://github.com/VarKhwezi/glowing-guacamole
 
-echo "Setup complete. Navigate to the repository folder to start the game!"
+echo "Setup complete. Virtual environment 'alien_invasion_env' created and Pygame installed."
+echo "Use 'source alien_invasion_env/bin/activate' to activate the environment before running the game."
